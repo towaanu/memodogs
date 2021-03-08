@@ -1,5 +1,7 @@
+import MemoGame from "../features/memo/MemoGame";
+
 function MemoPage() {
-  return <h1> Hello memo ! </h1>;
+  return <MemoGame />;
 }
 
 export default MemoPage;
