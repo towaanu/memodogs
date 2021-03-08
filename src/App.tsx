@@ -1,9 +1,11 @@
+import "./theme/index.css";
 import styles from "./App.module.css";
+import Button from "./features/common/Button";
 
 function App() {
   return (
     <div className={styles["App"]}>
-      <h1> Hello world ! </h1>
+      <Button> Start ! </Button>
     </div>
   );
 }
