@@ -1,13 +1,8 @@
 import "./theme/index.css";
-import styles from "./App.module.css";
-import Button from "./features/common/Button";
+import AppRouter from "./AppRouter";
 
 function App() {
-  return (
-    <div className={styles["App"]}>
-      <Button> Start ! </Button>
-    </div>
-  );
+  return <AppRouter />;
 }
 
 export default App;
