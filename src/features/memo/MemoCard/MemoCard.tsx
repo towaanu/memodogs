@@ -1,16 +1,16 @@
-import {MemoCard as MemoCardType} from '../types';
-import styles from './MemoCard.module.css';
+import { MemoCard as MemoCardType } from "../types";
+import styles from "./MemoCard.module.css";
 
 interface Props {
-    memoCard: MemoCardType
+  memoCard: MemoCardType;
 }
 
-function MemoCard({memoCard}: Props) {
-    return (
-    <div className={styles['memo-card']}>
-	<img src={memoCard.image} />
+function MemoCard({ memoCard }: Props) {
+  return (
+    <div className={styles["memo-card"]}>
+      <img alt={memoCard.image} src={memoCard.image} />
     </div>
-    )
+  );
 }
 
-export default MemoCard
+export default MemoCard;

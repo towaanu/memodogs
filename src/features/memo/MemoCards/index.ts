@@ -1,3 +1,3 @@
-import MemoCards from './MemoCards';
+import MemoCards from "./MemoCards";
 
 export default MemoCards;

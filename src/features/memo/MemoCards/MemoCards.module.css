@@ -1,13 +1,13 @@
 .memo-cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 15px;
 }
 
 .memo-card-item {
-    height: 200px;
-    width: 200px;
-    margin: 5px;
+  height: 200px;
+  width: 200px;
+  margin: 5px;
 }
