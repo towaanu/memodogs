@@ -1,15 +1,19 @@
 import {useEffect} from 'react';
-import { useDispatch } from 'react-redux';
-import {initMemo} from './memoSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import {initMemo, selectMemoCards} from './memoSlice';
+import MemoCards from './MemoCards';
 
 function MemoGame() {
   const dispatch = useDispatch();
+  const memoCards = useSelector(selectMemoCards);
 
   useEffect(() => {
-      dispatch(initMemo(3))
+      dispatch(initMemo(10))
   }, [dispatch])
 
-  return <h1> Memo game ! </h1>;
+  return (<>
+      <MemoCards memoCards={memoCards} />
+  </>);
 }
 
 export default MemoGame;
