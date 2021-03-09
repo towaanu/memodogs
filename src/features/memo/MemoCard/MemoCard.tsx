@@ -7,8 +7,16 @@ interface Props {
 
 function MemoCard({ memoCard }: Props) {
   return (
-    <div className={styles["memo-card"]}>
-      <img alt={memoCard.image} src={memoCard.image} />
+    <div
+      className={`${styles["memo-card"]} ${
+        memoCard.isHidden ? "" : styles["is-flipped"]
+      }`}
+    >
+      <div className={`${styles["front"]} ${styles["face"]}`}>
+        <img alt={memoCard.image} src={memoCard.image} />
+      </div>
+
+      <div className={`${styles["back"]} ${styles["face"]}`}></div>
     </div>
   );
 }
