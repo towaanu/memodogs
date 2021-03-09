@@ -15,8 +15,10 @@ function MemoCards({ memoCards }: Props) {
     dispatch(pickCard(index));
   }
 
+  const memoCardsStyle = styles[`memo-cards-${memoCards.length}`];
+
   return (
-    <div className={styles["memo-cards"]}>
+    <div className={`${styles["memo-cards"]} ${memoCardsStyle}`}>
       {memoCards.map((memoCard, index) => (
         <div
           key={index}

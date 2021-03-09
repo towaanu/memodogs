@@ -1,14 +1,24 @@
 .memo-cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 15px;
+  height: 100vh;
+
+  display: grid;
+  column-gap: 10px;
+  row-gap: 10px;
+  padding: 3px;
 }
 
 .memo-card-item {
-  height: 200px;
-  width: 200px;
-  margin: 5px;
   cursor: pointer;
+}
+
+@media screen and (min-width: 0px) {
+  .memo-cards-10 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 567px) and (orientation: landscape) {
+  .memo-cards-10 {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
