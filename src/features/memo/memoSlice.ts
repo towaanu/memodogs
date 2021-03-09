@@ -8,6 +8,7 @@ import {
   Action,
 } from "@reduxjs/toolkit";
 import { RootState } from "../../reduxStore";
+import { shuffle } from "../../helpers/array";
 
 interface Card {
   image: string;
@@ -74,12 +75,13 @@ const memoSlice = createSlice({
 
     builder.addCase(initMemo.fulfilled, (state, action) => {
       state.isLoading = false;
-      state.cards = action.payload
+      const doubledCards = action.payload
         .map((image) => ({ image, isHidden: true }))
         .reduce<Card[]>(
           (cards, newCard) => [...cards, { ...newCard }, { ...newCard }],
           []
         );
+      state.cards = shuffle(doubledCards);
     });
   },
 });
