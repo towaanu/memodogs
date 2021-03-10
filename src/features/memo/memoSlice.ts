@@ -40,6 +40,9 @@ const memoSlice = createSlice({
   name: "memo",
   initialState,
   reducers: {
+    initNewMemo: (_state) => {
+      return initialState;
+    },
     pickOneCard: (state, action: PayloadAction<number>) => {
       if (state.pickedCards.length === 2) return;
       const id = action.payload;
@@ -70,7 +73,11 @@ const memoSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(initMemo.pending, (state, _action) => {
-      state.isLoading = true;
+      return {
+        ...initialState,
+        cards: [...state.cards],
+        isLoading: true,
+      };
     });
 
     builder.addCase(initMemo.fulfilled, (state, action) => {
@@ -106,5 +113,17 @@ const selectMemoCards = createSelector(
   (memoState) => memoState.cards
 );
 
-export { memoSlice, selectMemo, selectMemoCards, initMemo, pickCard };
+const selectIsGameDone = createSelector(
+  [selectMemo],
+  (memoState) => memoState.isGameDone
+);
+
+export {
+  memoSlice,
+  selectMemo,
+  selectMemoCards,
+  selectIsGameDone,
+  initMemo,
+  pickCard,
+};
 export default memoSlice.reducer;

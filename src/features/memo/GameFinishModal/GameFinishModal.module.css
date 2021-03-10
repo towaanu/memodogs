@@ -1,0 +1,16 @@
+.game-finish-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 40vw;
+  height: 40vh;
+}
+
+.game-finish-modal .action-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { initMemo, selectMemoCards } from "./memoSlice";
 import MemoCards from "./MemoCards";
+import GameFinishModal from "./GameFinishModal";
 
 function MemoGame() {
   const dispatch = useDispatch();
@@ -13,6 +14,7 @@ function MemoGame() {
 
   return (
     <>
+      <GameFinishModal />
       <MemoCards memoCards={memoCards} />
     </>
   );
