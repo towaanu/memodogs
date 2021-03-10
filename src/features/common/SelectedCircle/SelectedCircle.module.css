@@ -1,0 +1,28 @@
+.selected-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  cursor: pointer;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.selected-circle.big-font {
+  font-size: 3em;
+}
+
+.selected-circle.is-selected {
+  background-color: var(--primary-color);
+  font-weight: bold;
+  color: var(--primary-contrast-color);
+}

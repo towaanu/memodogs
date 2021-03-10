@@ -1,0 +1,7 @@
+.badge {
+  padding: 5px;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+  color: var(--primary-contrast-color);
+  display: inline;
+}
