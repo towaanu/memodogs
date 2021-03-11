@@ -1,4 +1,4 @@
-import PrepareMemo from "../features/memo/PrepareMemo";
+import PrepareMemo from "../features/memoSetup/PrepareMemo";
 
 function HomePage() {
   return (
