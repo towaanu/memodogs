@@ -2,17 +2,19 @@ import Modal from "../../common/Modal";
 import Button from "../../common/Button";
 import styles from "./GameFinishModal.module.css";
 import { selectIsGameDone, initMemo } from "../memoSlice";
+import { selectMemoConfig } from "../../memoSetup/memoSetupSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { MouseEvent } from "react";
 import { useHistory } from "react-router-dom";
 
 function GameFinishModal() {
   const isGameDone = useSelector(selectIsGameDone);
+  const memoConfig = useSelector(selectMemoConfig);
   const dispatch = useDispatch();
   const history = useHistory();
 
   function handlePlayAgain(_e: MouseEvent<HTMLButtonElement>) {
-    dispatch(initMemo(5));
+    dispatch(initMemo(memoConfig));
   }
 
   function handleBackToHome() {

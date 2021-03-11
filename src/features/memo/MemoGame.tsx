@@ -3,14 +3,16 @@ import { useDispatch, useSelector } from "react-redux";
 import { initMemo, selectMemoCards } from "./memoSlice";
 import MemoCards from "./MemoCards";
 import GameFinishModal from "./GameFinishModal";
+import { selectMemoConfig } from "../memoSetup/memoSetupSlice";
 
 function MemoGame() {
   const dispatch = useDispatch();
   const memoCards = useSelector(selectMemoCards);
+  const memoConfig = useSelector(selectMemoConfig);
 
   useEffect(() => {
-    dispatch(initMemo(5));
-  }, [dispatch]);
+    dispatch(initMemo(memoConfig));
+  }, [dispatch, memoConfig]);
 
   return (
     <>

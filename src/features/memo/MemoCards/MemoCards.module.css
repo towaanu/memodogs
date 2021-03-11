@@ -3,9 +3,9 @@
   height: 100vh;
 
   display: grid;
-  column-gap: 10px;
-  row-gap: 10px;
-  padding: 3px;
+  column-gap: 5px;
+  row-gap: 5px;
+  padding: 2px;
 }
 
 .memo-card-item {
@@ -20,6 +20,14 @@
   .memo-cards-16 {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .memo-cards-30 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .memo-cards-60 {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 
 @media screen and (min-width: 567px) and (orientation: landscape) {
@@ -29,5 +37,13 @@
 
   .memo-cards-16 {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .memo-cards-30 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .memo-cards-60 {
+    grid-template-columns: repeat(10, 1fr);
   }
 }

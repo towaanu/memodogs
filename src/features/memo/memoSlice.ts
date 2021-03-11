@@ -9,6 +9,8 @@ import {
 } from "@reduxjs/toolkit";
 import { RootState } from "../../reduxStore";
 import { shuffle } from "../../helpers/array";
+import { MemoConfig } from "../../types";
+import { getCardCountByDifficulty } from "../../helpers/memoConfig";
 
 interface Card {
   image: string;
@@ -33,7 +35,10 @@ const initialState: MemoState = {
 
 const initMemo = createAsyncThunk(
   "memo/initMemo",
-  (cardsCount: number, _thunkApi) => dogsApi.randomDogs(cardsCount)
+  (memoConfig: MemoConfig, _thunkApi) => {
+    const cardsCount = getCardCountByDifficulty(memoConfig.difficulty);
+    return dogsApi.randomDogs(cardsCount);
+  }
 );
 
 const memoSlice = createSlice({
