@@ -1,4 +1,4 @@
-import * as dogsApi from "../../apis/dogs";
+import * as memodogsApi from "../../apis/memodogs";
 import {
   createSlice,
   createAsyncThunk,
@@ -37,7 +37,7 @@ const initMemo = createAsyncThunk(
   "memo/initMemo",
   (memoConfig: MemoConfig, _thunkApi) => {
     const cardsCount = getCardCountByDifficulty(memoConfig.difficulty);
-    return dogsApi.randomDogs(cardsCount);
+    return memodogsApi.randomImagesByMode(cardsCount, memoConfig.mode);
   }
 );
 

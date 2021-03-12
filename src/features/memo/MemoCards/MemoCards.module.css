@@ -25,8 +25,8 @@
     grid-template-columns: repeat(5, 1fr);
   }
 
-  .memo-cards-60 {
-    grid-template-columns: repeat(6, 1fr);
+  .memo-cards-48 {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -43,7 +43,7 @@
     grid-template-columns: repeat(5, 1fr);
   }
 
-  .memo-cards-60 {
-    grid-template-columns: repeat(10, 1fr);
+  .memo-cards-48 {
+    grid-template-columns: repeat(8, 1fr);
   }
 }

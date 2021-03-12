@@ -15,6 +15,7 @@ function MemoCards({ memoCards }: Props) {
     dispatch(pickCard(index));
   }
 
+  console.log("MEMO CARDS ", memoCards.length, "==> styles", styles);
   const memoCardsStyle = styles[`memo-cards-${memoCards.length}`];
 
   return (
