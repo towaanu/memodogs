@@ -52,14 +52,6 @@ function PrepareMemo() {
               {" "}
               🐱{" "}
             </SelectedCircle>
-            <SelectedCircle
-              onClick={() => selectMode(MemoMode.Bird)}
-              isSelected={isModeSelected(MemoMode.Bird)}
-              bigFont={true}
-            >
-              {" "}
-              🐦{" "}
-            </SelectedCircle>
           </div>
         </div>
 
