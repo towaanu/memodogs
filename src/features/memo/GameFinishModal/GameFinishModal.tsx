@@ -26,7 +26,7 @@ function GameFinishModal() {
       <div className={styles["game-finish-modal"]}>
         <h1> You won ! :) </h1>
         <div className={styles["action-buttons"]}>
-          <Button onClick={handleBackToHome}>Back to home</Button>
+          <Button onClick={handleBackToHome}>Back home</Button>
           <Button onClick={handlePlayAgain}>Play again ? </Button>
         </div>
       </div>
