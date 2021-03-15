@@ -57,6 +57,9 @@ const memoSlice = createSlice({
         state.pickedCards.push(id);
       }
     },
+    resetPickedCard: (state, _action) => {
+	state.pickedCards = []
+    },
     checkPickedCards: (state, action: PayloadAction<Array<number>>) => {
       const cardIdsToCheck = action.payload;
       if (cardIdsToCheck.length < 2) return;
@@ -73,7 +76,6 @@ const memoSlice = createSlice({
           state.cards[cardId].isHidden = true;
         });
       }
-      state.pickedCards = [];
     },
   },
   extraReducers: (builder) => {
@@ -102,13 +104,15 @@ const pickCard = (
   cardId: number
 ): ThunkAction<void, RootState, unknown, Action<string>> => {
   return (dispatch, getState) => {
-    const { pickOneCard, checkPickedCards } = memoSlice.actions;
+    const { pickOneCard, checkPickedCards, resetPickedCard } = memoSlice.actions;
+    
     dispatch(pickOneCard(cardId));
 
-    const state = getState();
-    const memoState = state.memo;
-
-    setTimeout(() => dispatch(checkPickedCards(memoState.pickedCards)), 500);
+    const memoState = getState().memo;
+    if(memoState.pickedCards.length === 2) {
+	dispatch(resetPickedCard({}))
+	setTimeout(() => dispatch(checkPickedCards(memoState.pickedCards)), 500);
+    }
   };
 };
 
