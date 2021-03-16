@@ -1,6 +1,6 @@
 .memo-cards {
   background-color: var(--background-color);
-  height: 100vh;
+  height: 100%;
 
   display: grid;
   column-gap: 5px;
