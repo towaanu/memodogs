@@ -31,69 +31,71 @@ function PrepareMemo() {
   }
 
   return (
-    <div className={styles["prepare-memo-container"]}>
-      <div className={styles["prepare-memo"]}>
-        <div className={styles["selector-container"]}>
-          <span className={styles["selector-label"]}> Mode </span>
+    <>
+      <div className={styles["prepare-memo-container"]}>
+        <div className={styles["prepare-memo"]}>
+          <div className={styles["selector-container"]}>
+            <span className={styles["selector-label"]}> Mode </span>
 
-          <div className={styles["card-topics-selector"]}>
-            <SelectedCircle
-              onClick={() => selectMode(MemoMode.Dog)}
-              isSelected={isModeSelected(MemoMode.Dog)}
-              bigFont={true}
-            >
-              🐶
-            </SelectedCircle>
-            <SelectedCircle
-              onClick={() => selectMode(MemoMode.Cat)}
-              isSelected={isModeSelected(MemoMode.Cat)}
-              bigFont={true}
-            >
-              {" "}
-              🐱{" "}
-            </SelectedCircle>
+            <div className={styles["card-topics-selector"]}>
+              <SelectedCircle
+                onClick={() => selectMode(MemoMode.Dog)}
+                isSelected={isModeSelected(MemoMode.Dog)}
+                bigFont={true}
+              >
+                🐶
+              </SelectedCircle>
+              <SelectedCircle
+                onClick={() => selectMode(MemoMode.Cat)}
+                isSelected={isModeSelected(MemoMode.Cat)}
+                bigFont={true}
+              >
+                {" "}
+                🐱{" "}
+              </SelectedCircle>
+            </div>
           </div>
-        </div>
 
-        <div className={styles["selector-container"]}>
-          <span className={styles["selector-label"]}> Difficulty </span>
-          <div className={styles["difficulty-selector"]}>
-            <SelectedCircle
-              onClick={() => selectDifficulty(MemoDifficulty.VeryEasy)}
-              isSelected={isDifficultySelected(MemoDifficulty.VeryEasy)}
-            >
-              {" "}
-              Very easy{" "}
-            </SelectedCircle>
-            <SelectedCircle
-              onClick={() => selectDifficulty(MemoDifficulty.Easy)}
-              isSelected={isDifficultySelected(MemoDifficulty.Easy)}
-            >
-              {" "}
-              Easy{" "}
-            </SelectedCircle>
-            <SelectedCircle
-              onClick={() => selectDifficulty(MemoDifficulty.Normal)}
-              isSelected={isDifficultySelected(MemoDifficulty.Normal)}
-            >
-              {" "}
-              Normal{" "}
-            </SelectedCircle>
-            <SelectedCircle
-              onClick={() => selectDifficulty(MemoDifficulty.Hard)}
-              isSelected={isDifficultySelected(MemoDifficulty.Hard)}
-            >
-              {" "}
-              Hard{" "}
-            </SelectedCircle>
+          <div className={styles["selector-container"]}>
+            <span className={styles["selector-label"]}> Difficulty </span>
+            <div className={styles["difficulty-selector"]}>
+              <SelectedCircle
+                onClick={() => selectDifficulty(MemoDifficulty.VeryEasy)}
+                isSelected={isDifficultySelected(MemoDifficulty.VeryEasy)}
+              >
+                {" "}
+                Very easy{" "}
+              </SelectedCircle>
+              <SelectedCircle
+                onClick={() => selectDifficulty(MemoDifficulty.Easy)}
+                isSelected={isDifficultySelected(MemoDifficulty.Easy)}
+              >
+                {" "}
+                Easy{" "}
+              </SelectedCircle>
+              <SelectedCircle
+                onClick={() => selectDifficulty(MemoDifficulty.Normal)}
+                isSelected={isDifficultySelected(MemoDifficulty.Normal)}
+              >
+                {" "}
+                Normal{" "}
+              </SelectedCircle>
+              <SelectedCircle
+                onClick={() => selectDifficulty(MemoDifficulty.Hard)}
+                isSelected={isDifficultySelected(MemoDifficulty.Hard)}
+              >
+                {" "}
+                Hard{" "}
+              </SelectedCircle>
+            </div>
           </div>
-        </div>
 
-        <Link to="/memo">
-          <Button> Start ! </Button>
-        </Link>
+          <Link to="/memo">
+            <Button> Start ! </Button>
+          </Link>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

@@ -58,7 +58,7 @@ const memoSlice = createSlice({
       }
     },
     resetPickedCard: (state, _action) => {
-	state.pickedCards = []
+      state.pickedCards = [];
     },
     checkPickedCards: (state, action: PayloadAction<Array<number>>) => {
       const cardIdsToCheck = action.payload;
@@ -104,14 +104,18 @@ const pickCard = (
   cardId: number
 ): ThunkAction<void, RootState, unknown, Action<string>> => {
   return (dispatch, getState) => {
-    const { pickOneCard, checkPickedCards, resetPickedCard } = memoSlice.actions;
-    
+    const {
+      pickOneCard,
+      checkPickedCards,
+      resetPickedCard,
+    } = memoSlice.actions;
+
     dispatch(pickOneCard(cardId));
 
     const memoState = getState().memo;
-    if(memoState.pickedCards.length === 2) {
-	dispatch(resetPickedCard({}))
-	setTimeout(() => dispatch(checkPickedCards(memoState.pickedCards)), 500);
+    if (memoState.pickedCards.length === 2) {
+      dispatch(resetPickedCard({}));
+      setTimeout(() => dispatch(checkPickedCards(memoState.pickedCards)), 500);
     }
   };
 };
