@@ -1,10 +1,10 @@
 # Memodogs
 A little memogame. The goal of the game is to find every pair of cards. \
-You can play the game [here](https://memodogs.towaanu.com)
+You can play the game [here](https://memodogs.towaanu.com).
 
 ## Install locally
 This project is setup using [create react app](https://create-react-app.dev/). \
-[Redux](https://redux.js.org/) is used for state management. \
+[Redux](https://redux.js.org/) is used for state management.
 
 ## Run locally
 We assume that you have copied the project locally. \
@@ -18,7 +18,7 @@ If you have nodejs installed, you can run the app with the following command :
 The app should be accessible in your browser : [http://localhost:3000](http://localhost:3000)
 
 ### Docker
-If you have Docker installed, you can launch the project using the commande below : \
+If you have Docker installed, you can launch the project using the commande below :
 ```sh
     docker run \
 	-p 3000:3000 \
@@ -31,4 +31,4 @@ If you have Docker installed, you can launch the project using the commande belo
 The app should be accessible in your browser : [http://localhost:3000](http://localhost:3000)
 
 ### Server
-To play the game you need the server api. You can fin it on [this repo](https://github.com/towaanu/memodogs-server) \
+To play the game you need the server api. You can find it on [this repo](https://github.com/towaanu/memodogs-server)
