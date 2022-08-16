@@ -8,7 +8,7 @@ let middlewares = new MiddlewareArray();
 
 if (process.env.NODE_ENV !== "production") {
   const logger = createLogger();
-  middlewares = middlewares.concat(logger);
+  middlewares = middlewares.concat(logger) as any;
 }
 
 const store = configureStore({

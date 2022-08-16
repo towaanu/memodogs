@@ -21,7 +21,7 @@ function SWUpdateModal() {
     if (!waitingWorker) return;
 
     waitingWorker?.postMessage({ type: "SKIP_WAITING" });
-    window.location.reload(true);
+    window.location.reload();
   }
 
   return (

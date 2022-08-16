@@ -1,0 +1,15 @@
+{
+	admin off
+}
+
+:80 {
+	log {
+		level INFO
+		output stderr
+	}
+	root * /memodogs
+	encode gzip
+	file_server
+
+	try_files {path} /index.html
+}
